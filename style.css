@@ -383,7 +383,7 @@ iframe {
   }
   
   .container {
-    top: 5%;
+    top: 0%;
     left: -15%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
@@ -392,7 +392,7 @@ iframe {
   }
 
   .random-img {
-    width: 40px; 
+    width: 10px; 
     height: auto;
   }
 
