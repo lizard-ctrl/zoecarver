@@ -399,7 +399,7 @@ iframe {
   .content {
     z-index: 3000;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 20%;
     display: none;
     box-shadow: 0px 0px 25px 25px rgba(255, 255, 255, 0.8);
