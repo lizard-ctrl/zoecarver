@@ -54,7 +54,7 @@
   }
 
 body {
-  
+  font-family: Georgia, Times, "Times New Roman", serif;
   background-size: cover;
   margin: 0;
   overflow: hidden;
@@ -138,7 +138,7 @@ h2 {
 }
 
 .nav-links {
-  display: flex; /* Show nav links horizontally */
+  display: flex; 
   justify-content: space-evenly;
   gap: 5px;
   opacity: 1;
@@ -147,7 +147,6 @@ h2 {
   border-radius: 10px;
   position: absolute;
   left: 0;
-  /* Optional: add background to nav */
   z-index: 999;
 }
 
@@ -165,10 +164,10 @@ h2 {
 
 #contactBar {
   position: fixed;
-  bottom: 0;
+  bottom: 25%;
   left: 0;
   width: 100%;
-  background-color: red;
+  text-shadow: black 0px 0px 30px, black 0px 0px 10px; 
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -184,7 +183,7 @@ h2 {
 #contactBar a:hover {
   text-decoration: none;
 }
-/* Hide the close button in nav */
+
 .nav-links .close-btn {
   display: none;
 }
@@ -196,7 +195,7 @@ h2 {
   font-size: 10px;
   text-decoration: none;
   position: absolute;
-  top: -50px; /* Distance from the top of the container */
+  top: -50px; 
   right: 10px;
   transition: background-color 0.3s ease;
   cursor: pointer;
@@ -206,6 +205,33 @@ h2 {
   color: red;
 }
 
+.link-bar {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 30px; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.link-icon img {
+  width: 50px; 
+  height: 50px;
+  object-fit: cover;
+}
+
+.link-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.link-bar a:hover {
+  transform: scale(1.1); 
+}
 
 .circle-btn.active {
   width: 0px; 
@@ -266,10 +292,19 @@ h2 {
     overflow: scroll;
 }
 
+iframe {
+  width: 95%;
+  height: 100%;
+  border: none; 
+}
+
 #info{
     position: absolute;
-    left: 45%;
-    width: 40%;
+    top: 15%;
+    left: 20%;
+    width: 60%;
+    height: 60%;
+
 }
 
 #desktopHide{
@@ -280,7 +315,7 @@ h2 {
 @media (max-width: 768px) {
 
   body {
-    font-family: "FontTen";
+    font-family: Georgia, Times, "Times New Roman", serif;
     background-color: black;
     background-image: none;
     margin: 0;
@@ -289,7 +324,7 @@ h2 {
   }
 
   .nav-links {
-    flex-direction: flex; /* Stack links vertically */
+    flex-direction: flex; 
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -297,7 +332,6 @@ h2 {
     top: 0;
     left: 0;
     width: 100%;
-     /* Add a background to make it readable */
     padding: 10px 0;
     z-index: 9999;
     flex-wrap: wrap;
@@ -305,12 +339,14 @@ h2 {
   }
 
   .nav-link {
-    font-size: 7vw; /* Increase font size for better tap targets */
+    
+    font-size: 7vw; 
     padding: 10px;
   }
 
   #contactBar {
-    font-size: 4vw; /* Slightly smaller font for mobile */
+    
+    font-size: 4vw; 
     padding: 1px 0;
   }
 
@@ -338,8 +374,8 @@ h2 {
 
   iframe {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16/9; /* Keep videos responsive */
+    height: 100%;
+    aspect-ratio: 16/9; 
   }
 
   #desktopHide{
@@ -347,15 +383,16 @@ h2 {
   }
   
   .container {
+    top: 10%;
     left: -15%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Grid for images */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
     gap: 0px;
     padding: 0px;
   }
 
   .random-img {
-    width: 40px; /* Smaller random images */
+    width: 40px; 
     height: auto;
   }
 
@@ -381,15 +418,15 @@ h2 {
     left: 5%;
     width: 80%;
     height: 50%;
-    background-color: white; /* Optional for better visibility */
-    border: 1px solid #ccc; /* Optional for a subtle border */
-    overflow: hidden; /* Prevents any overflow */
+    background-color: white; 
+    border: 1px solid #ccc; 
+    overflow: hidden; 
 }
 
 .pdf {
     width: 100%;
     height: 100%;
-    border: none; /* Removes any iframe/object border */
+    border: none;
 }
 
 #about{
@@ -413,5 +450,48 @@ h2 {
   right: -10px;
   cursor: pointer;
 }
+
+.link-bar {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 20px; 
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}
+
+.link-icon img {
+  width: 50px; 
+  height: 50px;
+  object-fit: cover;
+}
+
+.link-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.link-bar a:hover {
+  transform: scale(1.1); 
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .link-bar {
+    right: 0; 
+    left: 0; 
+    justify-content: center; 
+    bottom: 10px; 
+  }
+
+  .link-bar a {
+    margin: 0 10px; 
+  }
+}
+
 
 }

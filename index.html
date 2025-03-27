@@ -7,20 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="contactBar">
-        <p id="mobileHide">༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a> ༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ </p>
-       <p id="desktopHide"> 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a></p>
-    </div>
+    
     
     <h2 id="changingText">zoe carver</h2>
     <div class="nav-container">
-        
+        <div id="contactBar">
+            <p id="mobileHide">༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a> ༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ </p>
+           <p id="desktopHide"> 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a></p>
+        </div>
         <div class="nav-links">
             <a href="#" class="nav-link" data-content="about">About</a>
             <a href="#" class="nav-link" data-content="resume">Resume</a>
             <a href="#" class="nav-link" data-content="info">WWDC</a>
-            <a href="https://github.com/zoecarver" class="nav-link">Github</a>
-            <a href="#" class="nav-link" data-content="links">Links</a>
             <a href="#" class="close-btn">X</a> 
         </div>
     </div>
@@ -28,10 +26,10 @@
     <div id="about" class="content">
         <span class="close-btn">X</span>
        <div id="aboutText"></div>
-       <p>Zoe currently works on the visionOS System Software team in Apple’s <a href=”https://www.apple.com/apple-vision-pro/”>Vision Products Group</a> as a Senior System Engineer, leading projects and contributing across the stack from firmware, to system daemons (such as the visionOS compositor), and UI frameworks (such as SwiftUI).</p>
-       <p>Zoe started full time at Apple working on <a href=”https://github.com/swiftlang/swift-evolution/blob/main/visions/using-c%2B%2B-from-swift.md”>Swift and C++ interop,<a> a project he had been leading for several years in high school. Once at Apple, he continued to push this effort forward, eventually releasing it at WWDC23 where it was featured in the  <a href=”https://developer.apple.com/videos/play/wwdc2023/10172/”>keynote,<a> SOTU, and a number of sessions.</p>
-       <p>Next he turned his focus to the intersection of programming languages, security, and operating systems where he helped with a number of security initiatives, including the Embedded Swift project, implementing parts of the feature and helping adopt Swift across Apple’s operating systems.</p>
-       <p>Contact Zoe <a href=”tel:+12068591242”>here 📱</a> and <a href=”mailto:zoec@zoecarver.com”>here 📧</a>.</p>
+       <p>Zoe currently works on the visionOS System Software team in Apple’s Vision Products Group as a Senior System Engineer, leading projects and contributing across the stack from firmware, to system daemons (such as the visionOS compositor), and UI frameworks (such as SwiftUI).</p>
+       <p>Zoe started full time at Apple working on <a href=”https://www.swift.org/documentation/cxx-interop/”>Swift and C++ interop,</a> a project he had been leading for several years in high school. Once at Apple, he continued to push this effort forward, eventually releasing it at WWDC23 where it was featured in the keynote, SOTU, and a number of <a href=”https://developer.apple.com/videos/play/wwdc2023/10172/”>sessions</a>.</p>
+       <p>Next he turned his focus to the intersection of programming languages, security, and operating systems where he helped with a number of security initiatives, including the <a href=”https://www.swift.org/blog/embedded-swift-examples/”>Embedded Swift project</a>, implementing parts of the feature and helping adopt Swift across Apple’s operating systems.</p>
+      
     </div>
     
     <div id="resume" class="content">
@@ -51,6 +49,22 @@
         <p>loinkslinkslinks</p>
     </div>
 
+    <div class="link-bar">
+        <a href="https://github.com/zoecarver" target="_blank" class="link-icon">
+            <img src="icons/github.png" alt="Github">
+          </a>
+        <a href="https://www.linkedin.com/in/zoe-carver-4aa82418b/" target="_blank" class="link-icon">
+          <img src="icons/linkedim.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/_zoecarver/" target="_blank" class="link-icon">
+            <img src="icons/instagram.png" alt="Instagram">
+          </a>
+        <a href="https://open.spotify.com/user/pudility?si=lkcR0iKJQn68Cdscgn-2jg" target="_blank" class="link-icon">
+          <img src="icons/spotify.png" alt="Spotify">
+        </a>
+      
+        
+      </div>
     
 <div class="container" id="imageContainer"></div>
 
@@ -144,6 +158,7 @@ const circleBtn = document.querySelector('.circle-btn');
             contentDiv.classList.add('active');
 
             changingText.style.display = 'none';
+            contactBar.style.display = 'none';
         });
     });
 
@@ -155,6 +170,7 @@ const circleBtn = document.querySelector('.circle-btn');
 
             if (![...contentSections].some(section => section.classList.contains('active'))) {
                 changingText.style.display = 'block';
+                contactBar.style.display = 'block';
             }
         });
     });
