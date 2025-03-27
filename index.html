@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="contactBar">
+        <p id="mobileHide">༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a> ༺☆༻ ༺☆༻ ༺☆༻ ༺☆༻ </p>
+       <p id="desktopHide"> 📱 <a href="tel:+12068591242">+1 (206) 859-1242</a> | 📧 <a href="mailto:zoec@zoecarver.com">zoec@zoecarver.com</a></p>
+    </div>
+    
     <h2 id="changingText">zoe carver</h2>
     <div class="nav-container">
-        <div class="circle-btn">
-            ?
-        </div>
+        
         <div class="nav-links">
             <a href="#" class="nav-link" data-content="about">About</a>
             <a href="#" class="nav-link" data-content="resume">Resume</a>
@@ -33,15 +36,14 @@
     
     <div id="resume" class="content">
         <span class="close-btn">X</span>
-        <object class="pdf" data="resume/resume.pdf" type="application/pdf">
-            alt : <a href="resume/resume.pdf">test.pdf</a>
-        </object>
+        <iframe class="pdf" src="resume/resume.pdf"></iframe>
+
         
     </div>
     
     <div id="info" class="content">
         <span class="close-btn">X</span>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MixEUoUQyNU?si=n4uQA-kZJ_h-aQR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/MixEUoUQyNU?si=n4uQA-kZJ_h-aQR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     
     <div id="links" class="content">
@@ -120,10 +122,7 @@ const circleBtn = document.querySelector('.circle-btn');
     const nameHeader = document.getElementById('nameHeader'); 
 
     
-    circleBtn.addEventListener('click', () => {
-        circleBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-    });
+   
 
    
     closeBtnNav.addEventListener('click', () => {
@@ -166,10 +165,13 @@ let currentIndex = 0;
 
 
 function changeBackgroundImage() {
+  if (window.innerWidth > 775) {
     document.body.style.backgroundImage = `url('${images[currentIndex]}')`;
-    
-    
     currentIndex = (currentIndex + 1) % images.length;
+  } else {
+    // Optional: reset to a default background for mobile
+    document.body.style.backgroundImage = "none";
+  }
 }
 
 
