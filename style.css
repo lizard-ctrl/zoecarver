@@ -383,7 +383,7 @@ iframe {
   }
   
   .container {
-    top: 10%;
+    top: -3%;
     left: -15%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
@@ -429,12 +429,13 @@ iframe {
     border: none;
 }
 
-#about{
-    top: 23%;
-    font-size: 120%;
-    height: 50%;
-    padding: 5%;
-    overflow: scroll;
+#about {
+  top: 23%;
+  font-size: 120%;
+  height: 50%;
+  padding: 5%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 #info{
@@ -479,8 +480,8 @@ iframe {
   transform: scale(1.1); 
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
+
+
   .link-bar {
     right: 0; 
     left: 0; 
@@ -491,7 +492,7 @@ iframe {
   .link-bar a {
     margin: 0 10px; 
   }
-}
+
 
 
 }

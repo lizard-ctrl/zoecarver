@@ -132,7 +132,11 @@ function createStars(numStars) {
     }
 }
 
-createStars(30);
+window.addEventListener("load", function () {
+    if (window.innerWidth > 775) {
+        createStars(30);
+    }
+});
 
 const circleBtn = document.querySelector('.circle-btn');
     const navLinks = document.querySelector('.nav-links');
