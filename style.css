@@ -364,7 +364,7 @@ iframe {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 20vw; 
+    font-size: 24vw; 
     white-space: wrap; 
   }
 
@@ -383,7 +383,7 @@ iframe {
   }
   
   .container {
-    top: 0%;
+    top: 5%;
     left: -15%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
