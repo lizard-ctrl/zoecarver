@@ -87,8 +87,8 @@ h2 {
   color: red;
   text-align: center;
   transition: font-family 0.5s ease-in-out;
-  text-shadow: 0 0 50px white;
-  top: 30%;
+  
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 14vw; 
@@ -164,7 +164,7 @@ h2 {
 
 #contactBar {
   position: fixed;
-  bottom: 25%;
+  bottom: 35%;
   left: 0;
   width: 100%;
   text-shadow: black 0px 0px 30px, black 0px 0px 10px; 
@@ -360,7 +360,7 @@ iframe {
     color: red;
     text-align: center;
     transition: font-family 0.5s ease-in-out;
-    text-shadow: 0 0 50px white;
+    
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -389,6 +389,12 @@ iframe {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
     gap: 0px;
     padding: 0px;
+  }
+
+  #contactBar {
+   
+    bottom: 25%;
+    
   }
 
   .random-img {
