@@ -109,7 +109,7 @@ const fonts = ['FontOne', 'FontTwo', 'FontThree','FontFour','FontFive','FontSix'
 let index = 0;
 
 setInterval(() => {
-    document.getElementById("changingText").style.fontFamily = fonts[index];
+    document.getElementById("changingTextNone").style.fontFamily = fonts[index];
     index = (index + 1) % fonts.length;
 }, 3000);
 
